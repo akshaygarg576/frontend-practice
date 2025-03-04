@@ -16,4 +16,5 @@ export interface CommentsProps {
 export interface CommentBoxProps {
   comment: CommentInfo;
   isCollapsed?: boolean;
+  addComment?: (parentId: string, comment: CommentInfo) => void;
 }

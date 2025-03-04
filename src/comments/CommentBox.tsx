@@ -6,8 +6,11 @@ import { CommentBoxProps } from "./Comments.types";
  */
 export default function CommentBox(props: CommentBoxProps) {
   const [isCollapsed, setIsCollapsed] = useState(props.isCollapsed);
+  const [reply, setReply] = useState("");
+  const [isReplying, setIsReplying] = useState(false);
 
   const handleCollapseClick = () => setIsCollapsed((prevState) => !prevState);
+  const handleReplyClick = () => setIsReplying(true);
 
   return (
     <div>
@@ -30,6 +33,7 @@ export default function CommentBox(props: CommentBoxProps) {
         )}
       </div>
       <p className="text-gray-500">{props.comment.data}</p>
+      {props.addComment && <button onClick={handleReplyClick}>Reply</button>}
 
       {/* self composition or recursion to render the replies */}
       {!isCollapsed &&
