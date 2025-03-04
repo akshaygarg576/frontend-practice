@@ -10,7 +10,7 @@ export default function CommentBox(props: CommentBoxProps) {
   const handleCollapseClick = () => setIsCollapsed((prevState) => !prevState);
 
   return (
-    <div className="mb-4">
+    <div>
       <div className="flex items-center">
         <img
           // use webP image format for better performance
@@ -34,7 +34,7 @@ export default function CommentBox(props: CommentBoxProps) {
       {/* self composition or recursion to render the replies */}
       {!isCollapsed &&
         props.comment.reply?.map((commentReply) => (
-          <div style={{ marginLeft: 60 }}>
+          <div className="pl-16 border-l-2 border-black">
             <CommentBox comment={commentReply} key={commentReply.id} />
           </div>
         ))}

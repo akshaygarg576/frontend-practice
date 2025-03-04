@@ -6,17 +6,13 @@ import { CommentsProps } from "./Comments.types";
  * Responsibility: render the list of Comment boxes
  */
 export default function Comments(props: CommentsProps) {
-  return (
-    <div>
-      {props.data.map((comment) => {
-        return (
-          <CommentBox
-            comment={comment}
-            key={comment.id}
-            isCollapsed={props.isCollapsed}
-          />
-        );
-      })}
-    </div>
-  );
+  return props.data.map((comment) => {
+    return (
+      <CommentBox
+        comment={comment}
+        key={comment.id}
+        isCollapsed={props.isCollapsed}
+      />
+    );
+  });
 }
