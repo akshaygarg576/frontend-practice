@@ -9,7 +9,13 @@ export default function Comments(props: CommentsProps) {
   return (
     <div>
       {props.data.map((comment) => {
-        return <CommentBox comment={comment} key={comment.id} />;
+        return (
+          <CommentBox
+            comment={comment}
+            key={comment.id}
+            isCollapsed={props.isCollapsed}
+          />
+        );
       })}
     </div>
   );

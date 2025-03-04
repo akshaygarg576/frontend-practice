@@ -10,8 +10,10 @@ export type CommentInfo = {
 
 export interface CommentsProps {
   data: CommentInfo[];
+  isCollapsed?: boolean;
 }
 
 export interface CommentBoxProps {
   comment: CommentInfo;
+  isCollapsed?: boolean;
 }

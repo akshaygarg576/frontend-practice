@@ -1,10 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { CommentBoxProps } from "./Comments.types";
 
 /**
  * Responsibility: Render the CommentBox and it's replies related to itself -- whether to show it or not.
  */
 export default function CommentBox(props: CommentBoxProps) {
+  const [isCollapsed, setIsCollapsed] = useState(props.isCollapsed);
+
+  const handleCollapseClick = () => setIsCollapsed((prevState) => !prevState);
+
   return (
     <div className="mb-4">
       <div className="flex items-center">
@@ -15,15 +19,25 @@ export default function CommentBox(props: CommentBoxProps) {
           className="w-8 h-8 cover-fit rounded-full"
         />
         <h1 className="ml-2">{props.comment.user_meta.name}</h1>
+        {props.comment.reply?.length > 0 && (
+          <button
+            className="ml-10 bg-slate-400 p-1 rounded-md"
+            onClick={handleCollapseClick}
+          >
+            {/* This could be replaced by icons */}
+            {isCollapsed ? "Expand" : "Collapse"}
+          </button>
+        )}
       </div>
       <p className="text-gray-500">{props.comment.data}</p>
 
       {/* self composition or recursion to render the replies */}
-      {props.comment.reply.map((commentReply) => (
-        <div style={{ marginLeft: 60 }}>
-          <CommentBox comment={commentReply} key={commentReply.id} />
-        </div>
-      ))}
+      {!isCollapsed &&
+        props.comment.reply?.map((commentReply) => (
+          <div style={{ marginLeft: 60 }}>
+            <CommentBox comment={commentReply} key={commentReply.id} />
+          </div>
+        ))}
     </div>
   );
 }
