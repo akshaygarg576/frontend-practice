@@ -6,11 +6,11 @@ This repository contains individual branches for different frontend components I
 
 ## 📂 Repository Structure
 
-| Branch Name        | Description                                              |
-| ------------------ | -------------------------------------------------------- |
-| `main`             | Base setup (Create React App + TypeScript configuration) |
-| `feature/carousel` | Image carousel component with navigation and autoplay    |
-| `feature/comments` | Comments section with expand collapse, nested replies    |
+| Branch Name        | Description                                                                    |
+| ------------------ | ------------------------------------------------------------------------------ |
+| `main`             | Base setup (Create React App + TypeScript + Tailwind + Prettier configuration) |
+| `feature/carousel` | Image carousel component with navigation and autoplay                          |
+| `feature/comments` | Comments section with expand collapse, nested replies                          |
 
 ---
 
