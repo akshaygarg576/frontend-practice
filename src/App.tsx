@@ -1,5 +1,11 @@
+import BoxGrid from "./components/BoxGrid";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="m-4">
+      <BoxGrid n={8} primaryColor="red" secondaryColor="blue" />
+    </div>
+  );
 }
 
 export default App;
