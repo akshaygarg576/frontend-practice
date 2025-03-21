@@ -75,7 +75,13 @@ const TicTacToe = ({ size }) => {
       ) : (
         <h1>Winner: {winner}</h1>
       )}
-      <div className="board">
+      <div
+        className="board"
+        style={{
+          gridTemplateColumns: `repeat(${size}, 100px)`,
+          gridTemplateRows: `repeat(${size}, 100px)`,
+        }}
+      >
         {board.map((row, rowIndex) => {
           return row.map((cell, columnIndex) => {
             return (
