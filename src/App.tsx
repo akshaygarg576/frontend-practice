@@ -1,5 +1,11 @@
+import TicTacToe from "./components/ticTacToe/TicTacToe";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="m-8">
+      <TicTacToe size={3} />
+    </div>
+  );
 }
 
 export default App;
