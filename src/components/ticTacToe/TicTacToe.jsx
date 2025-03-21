@@ -70,7 +70,11 @@ const TicTacToe = ({ size }) => {
 
   return (
     <div>
-      <h1>Winner: {winner}</h1>
+      {!winner ? (
+        <h3>Next Player: {isXNext ? PLAYER_X : PLAYER_O}</h3>
+      ) : (
+        <h1>Winner: {winner}</h1>
+      )}
       <div className="board">
         {board.map((row, rowIndex) => {
           return row.map((cell, columnIndex) => {
