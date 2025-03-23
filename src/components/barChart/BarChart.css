@@ -1,0 +1,34 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 80%;
+  height: 500px;
+  padding-top: 16px;
+}
+
+.chart {
+  width: 100%;
+  height: 100%;
+  border: 2px solid grey;
+  border-top-width: 0;
+  border-right-width: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  gap: 10px;
+  justify-content: space-between;
+}
+
+.y-axis-label {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: rotate(-90deg) translateY(-200%);
+}
+
+.x-axis-label {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+}
