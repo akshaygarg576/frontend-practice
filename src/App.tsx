@@ -1,5 +1,12 @@
+import FileExplorer from "./components/fileExplorer/FileExplorer";
+import { backendData } from "./mockData/index";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="app">
+      <FileExplorer data={backendData} selectedId={"2"} />
+    </div>
+  );
 }
 
 export default App;
