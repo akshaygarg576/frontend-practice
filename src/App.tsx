@@ -1,5 +1,13 @@
+import OTPInput from "./components/otpInput/OTPInput";
+
 function App() {
-  return <h1 className="text-3xl font-bold underline">Hello world!</h1>;
+  return (
+    <div className="m-10">
+      <div>
+        <OTPInput size={4} />
+      </div>
+    </div>
+  );
 }
 
 export default App;
