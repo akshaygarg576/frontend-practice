@@ -106,17 +106,16 @@ const BoxGrid = ({
   }, []);
 
   return (
-    <div className="flex" onClick={handleClick}>
+    <div className="flex flex-wrap" onClick={handleClick}>
       {colors.map((color, index) => {
         return (
           <div
             key={index}
+            className="w-1/4 m-2"
             data-index={index}
             style={{
-              width: "50px",
               height: "50px",
               backgroundColor: color,
-              marginLeft: "20px",
               cursor: "pointer",
             }}
           />
