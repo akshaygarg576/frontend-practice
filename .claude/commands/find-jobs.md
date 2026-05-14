@@ -1,14 +1,16 @@
 Find relevant job openings based on my profile.
 
 Steps:
-1. Read `job-search/profile.md` to understand my target roles, tech stack, preferences, and what I'm NOT looking for.
+1. Read `job-search/profile.md` to understand my target roles, tech stack, preferences, what I'm NOT looking for, and the **Company Blocklist**.
 2. Search the web for recent job openings that match. Search across:
    - LinkedIn Jobs
    - Y Combinator job board (workatastartup.com)
    - Wellfound (angel.co)
    - Greenhouse/Lever job boards for companies in my preferred industries
    - Any other relevant job boards based on my location/role
-3. For each opening found, assess fit against my profile (role, stack, level, location, company size).
+3. For each opening found:
+   - Immediately discard any company on the **Company Blocklist** — do not surface them at all.
+   - Assess fit against my profile (role, stack, level, location, company size).
 4. List only the ones that are a STRONG match. For each, include:
    - Company name
    - Role title
